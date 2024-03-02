@@ -1,0 +1,144 @@
+:root{
+  --lightest-color: #cce0d9;
+  --light-primary: #dae4c7;
+  --primary-color: #87be68;
+  --light-secondary: #839085;
+  --secondary-color: #414941;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    background-color: var(--light-secondary);
+    min-width: 350px;
+  }
+
+  button{
+    all:unset;
+    cursor: pointer;
+  }
+  
+  header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: var(--secondary-color);
+    color: var(--lightest-color)
+  }
+  
+  #search-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+  }
+  
+  .movie-name-wraper{
+    width:65%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .movie-name-wraper > input{
+    width: 100%;
+    min-width: 200px;
+    color: var(--secondary-color);
+    font-size: large;
+  }
+  
+  .movie-year-wraper{
+    display: flex;
+    align-items: center;
+  }
+  
+  .movie-year-wraper > input{
+    max-width:5rem;
+    color: var(--secondary-color);
+    font-size: large;
+  }
+  
+  .movie-name-wraper > input, .movie-year-wraper > input{
+    border-radius: 7px;
+    padding: 0.3rem 0.2rem;
+    font-weight: bold;
+    margin: 0 1rem;
+  }
+  
+  .movie-name-wraper > label, .movie-year-wraper > label{
+    font-weight: bold;
+    font-size: small;
+    margin-left:0 1rem;
+  }
+  
+  .bi-film{
+    margin-right: .5rem;
+  }
+  
+  #search-button{
+    width:20px;
+    all:unset;
+    margin:0 1rem;
+    padding: 0.3rem;
+    border: 0.1rem solid var(--lightest-color);
+    background-color: var(--light-secondary);
+    border-radius: 7px;
+    cursor: pointer;
+  }
+  
+  #search-button:hover, search-button:focus {
+    background-color: var(--secondary-color);
+    box-shadow: 1px 1px 1px;
+  }
+  
+  /* ---------------------SESSÃƒO PRINCIPAL------------------------ */
+  
+main{
+    text-align: center;
+    flex-grow: 1;
+    padding: 2rem 0;
+    background-color: var(--light-primaryprimary);
+}
+
+#movie-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+#movie-list article{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#movie-list article img{
+  border-radius: 7px;
+  margin-bottom: 0.5rem;
+  max-height: 300px;
+}
+
+.remove-button{
+     border: 2px solid var(--light-secondary);
+     background-color: var(--lightest-color);
+    padding: .3rem 0;
+    border-radius: 7px;
+    width: 100%;
+    font-weight: bold;
+    box-shadow: 1px 4px 7px var(--secondary-color);
+}
+
+.remove-button:hover{
+    background-color: var(--secondary-color);
+    color: var(--lightest-color);
+}

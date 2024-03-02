@@ -1,0 +1,96 @@
+:root{
+    --lightest-color: #cce0d9;
+    --light-primary: #dae4c7;
+    --primary-color: #9bba9b;
+    --light-secondary: #839085;
+    --secondary-color: #414941;
+  }
+main{
+    color: var(--secondary-color)
+}
+
+main > h2{
+    color:white
+}
+
+#modal-overlay {
+    display: flex;
+    position: fixed;
+    top: 7rem;
+    left:0;
+    width: 100vw;
+    height: 100dvh;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    visibility: hidden;
+    transition: all 0.5s ease-in;
+    opacity: 0;
+}
+
+.open{
+    visibility: visible;
+    opacity: 1;
+}
+
+#modal-background {
+    background-color: var(--light-secondary);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index:0;
+    opacity: 0.4;
+}
+
+#modal-container {
+    z-index:1;
+    background-color: var(--light-primary);
+    padding: 2rem 2rem;
+    border-radius: 15px;
+    margin-bottom: 4rem;
+}
+
+#modal-container{
+    background-color: var(--lightest-color);
+}
+
+#movie-title{
+    padding: 1rem 0;
+}
+
+#modal-body {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+#movie-poster{
+    border-radius: 7px;
+    margin-right: 1rem;
+}
+
+#movie-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    padding-left: 2rem;
+    max-width: 300px;
+    min-width: 250px;
+}
+
+#add-to-list{
+    border: 2px solid var(--light-secondary);
+    padding: .3rem 0;
+    border-radius: 7px;
+    width: 100%;
+    font-weight: bold;
+    box-shadow: 1px 4px 7px var(--secondary-color);
+}
+
+#add-to-list:focus, #add-to-list:hover{
+    background-color: var(--light-secondary);
+    color: var(--lightest-color);
+}
